@@ -16,7 +16,7 @@ const PresentationCard_1 = (): ReactNode => {
         Smart Workforce Management, Talent Acquisition, HR Solutions, and
         Co-Development Partnerships
       </div>
-      <div className="flex-grow mt-4 mb-20 text-gray-300">
+      <div className="flex-grow text-sm mt-4 mb-20 text-gray-300">
         DNE Solutions provides smart workforce management, talent acquisition,
         HR services, and recruitment. With advanced hiring tools, trial-based
         placements, workforce analytics, and scalable project support, we help
@@ -35,17 +35,17 @@ const PresentationCard_2 = (): ReactNode => {
       <div className="flex-grow">
         <PageCardLink linkText={"Read more"} linkHref={"/"} />
       </div>
-      <div className="border-1 border-white relative h-50">
+      <div className="z-3 relative h-75">
         <Image
           className={"style_1"}
-          src={"/frame-game-1.jpeg"}
+          src={"/newmoon-img-1.png"}
           alt={""}
           width={100}
           height={100}
         />
         <Image
           className={"style_2"}
-          src={"/frame-game-2.jpeg"}
+          src={"/newmoon-img-2.png"}
           alt={""}
           width={100}
           height={100}
@@ -58,28 +58,55 @@ const PresentationCard_2 = (): ReactNode => {
 const PresentationCard_3 = (): ReactNode => {
   return (
     <div className="h-full flex flex-col">
-      <div className="my-4 text-gray-300">
+      <div className="my-4 text-sm text-gray-300">
         The official DNE Store features a range of exclusive collections—from
         sporty and streetwear to elegant and casual designs—blending original,
         timeless style with iconic fashion, sci-fi innovation, and gaming
         culture.
       </div>
-      <PageCardLink linkText={"Visit site"} linkHref={"/"} />
+      <div className="pb-4">
+        <PageCardLink linkText={"Visit site"} linkHref={"/"} />
+      </div>
+
+      <Image
+        className="frame-clot"
+        src={"/frame-clothes.png"}
+        alt={""}
+        width={100}
+        height={100}
+      />
     </div>
   );
 };
 
 const PresentationCard_4 = (): ReactNode => {
+  const listItems = [
+    "Conversational AI & Chatbots",
+    "Speech & Audio Processing",
+    "Autonomous Agents",
+    "Generative AI",
+    "Custom AI Pipelines",
+    "Computer Vision",
+    "Multimodal AI",
+    "Edge AI & On-Device Processing",
+  ];
+
   return (
     <div className="h-full flex flex-col">
-      <div className="text-lg font-semibold text-gray-100">
+      <div className="text-xl font-semibold text-gray-100 mt-4 pr-16">
         DNE AI specializes in developing cutting-edge AI solutions tailored to
         various applications, including:
       </div>
 
-      <div className="my-4">items</div>
+      <div className="my-6 flex flex-wrap">
+        {listItems.map((item) => (
+          <div key={item} className="custom-card-title py-1 px-1 mr-1 mb-2">
+            {item}
+          </div>
+        ))}
+      </div>
 
-      <div className="flex-grow text-gray-300">
+      <div className="flex-grow text-gray-300 text-sm">
         Need an AI solution? Just send it our way—We’ve got it covered.
       </div>
 
@@ -101,7 +128,7 @@ const Home = () => {
         buttonText="Learn More"
       />
 
-      <div className="m-auto pt-20 px-36 grid grid-cols-2 gap-16 text-white">
+      <div className="m-auto pt-20 px-32 grid grid-cols-2 gap-14 text-white">
         <PagePresentationCard
           cardTitle={"DNE SOLUTIONS"}
           cardSubtitle={"HR SERVICES"}
@@ -132,20 +159,24 @@ const Home = () => {
         />
       </div>
 
-      <div className="m-auto pt-20 pb-32 px-36 grid grid-cols-3 text-white">
+      <div className="m-auto pt-26 pb-32 px-29 grid grid-cols-3 text-white">
         <PageStatusCard
           iconPath={"/check-icon.png"}
           iconAlt={"Status Icon"}
           firstText={"85%"}
           secondText={"of trial-based candidates converted to long-term hires."}
-          css={" col-start-1 col-end-2 justify-items-center"}
+          css={
+            "tcntt text-sh-effect col-start-1 col-end-2 justify-items-center"
+          }
         />
         <PageStatusCard
           iconPath={"/lighting-icon.png"}
           iconAlt={"Status Icon"}
           firstText={"40%"}
           secondText={"faster hiring processes with trial placements."}
-          css={" col-start-3 col-end-4 justify-items-center"}
+          css={
+            "tcntt text-sh-effect col-start-3 col-end-4 justify-items-center"
+          }
         />
         <PageStatusCard
           iconPath={"/stats-icon.png"}

@@ -25,7 +25,10 @@ const Header = () => {
         >
           Services
         </Link>
-        <Link href={""} className="text-gray-100 hover:text-gray-300 ml-10">
+        <Link
+          href={"/industries"}
+          className="text-gray-100 hover:text-gray-300 ml-10"
+        >
           Industries
         </Link>
         <Link
@@ -34,7 +37,10 @@ const Header = () => {
         >
           About Us
         </Link>
-        <Link href={""} className="text-gray-100 hover:text-gray-300 ml-10">
+        <Link
+          href={"/use-cases"}
+          className="text-gray-100 hover:text-gray-300 ml-10"
+        >
           Use Cases
         </Link>
         <Link

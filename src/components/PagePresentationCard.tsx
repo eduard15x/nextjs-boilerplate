@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import { ReactNode } from "react";
 
 interface IPagePresentationCard {
@@ -14,13 +13,13 @@ const PagePresentationCard = (props: IPagePresentationCard) => {
     backgroundImage: `url(${props.cardBackgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    minHeight: "500px",
+    minHeight: "540px",
     maxHeight: "600px",
   };
 
   return (
     <div
-      className={`${props.css} rounded-xl p-7 flex flex-col items-start`}
+      className={`${props.css} rounded-xl pt-7 pb-5 px-6 flex flex-col items-start`}
       style={style}
     >
       <div className="flex items-center w-auto custom-card-title text-3xl px-2 py-1">

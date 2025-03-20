@@ -3,7 +3,7 @@ import Image from "next/image";
 interface IPageStatusCard {
   iconPath: string;
   iconAlt: string;
-  firstText: string;
+  firstText?: string;
   secondText: string;
   css: string;
 }
@@ -20,11 +20,20 @@ const PageStatusCard = (props: IPageStatusCard) => {
             height={100}
           />
         </div>
-        <div className="pl-4 h-full flex flex-col justify-between">
-          <div className="special-percentage">{props.firstText}</div>
+        <div
+          className={`pl-4 h-full flex flex-col  ${
+            props.firstText ? "" : "justify-center"
+          }`}
+        >
+          {props.firstText ? (
+            <div className="special-percentage">{props.firstText}</div>
+          ) : null}
+
           <div
-            className="text-gray-300 font-semibold"
-            style={{ maxWidth: "242px" }}
+            className={`${
+              props.firstText ? "flex flex-grow items-end" : ""
+            } text-gray-300 font-semibold text-sh-effect`}
+            style={{ maxWidth: "250px" }}
           >
             {props.secondText}
           </div>
