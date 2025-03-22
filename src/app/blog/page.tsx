@@ -3,7 +3,13 @@ export const metadata = {
 };
 
 const Blog = () => {
-  return <h1>Welcome Blog!</h1>;
+  return (
+    <div>
+      <h1 className="text-white">Blog</h1>
+
+      <div className="my-16 text-white">Blog coming soon.</div>
+    </div>
+  );
 };
 
 export default Blog;

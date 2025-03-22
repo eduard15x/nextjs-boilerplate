@@ -38,17 +38,17 @@ const PresentationCard_2 = (): ReactNode => {
       <div className="z-3 relative h-75">
         <Image
           className={"style_1"}
-          src={"/newmoon-img-1.png"}
-          alt={""}
-          width={100}
-          height={100}
+          src={"/frames/frame-newmoon-1.png"}
+          alt={"Newmoon Site Page Capture"}
+          width={300}
+          height={200}
         />
         <Image
           className={"style_2"}
-          src={"/newmoon-img-2.png"}
-          alt={""}
-          width={100}
-          height={100}
+          src={"/frames/frame-newmoon-2.png"}
+          alt={"Newmoon Site Page Capture"}
+          width={300}
+          height={200}
         />
       </div>
     </div>
@@ -70,10 +70,10 @@ const PresentationCard_3 = (): ReactNode => {
 
       <Image
         className="frame-clot"
-        src={"/frame-clothes.png"}
+        src={"/frames/frame-clothes.png"}
         alt={""}
-        width={100}
-        height={100}
+        width={500}
+        height={400}
       />
     </div>
   );
@@ -132,28 +132,28 @@ const Home = () => {
         <PagePresentationCard
           cardTitle={"DNE SOLUTIONS"}
           cardSubtitle={"HR SERVICES"}
-          cardBackgroundImage={"/card-design-blue.png"}
+          cardBackgroundImage={"/design/card-design-blue.png"}
           cardContent={PresentationCard_1()}
           css={"col-span-1 col-start-1"}
         />
         <PagePresentationCard
           cardTitle={"DNE GAMES"}
           cardSubtitle={"NEW MOONS"}
-          cardBackgroundImage={"/card-design-green.png"}
+          cardBackgroundImage={"/design/card-design-green.png"}
           cardContent={PresentationCard_2()}
           css={"col-span-1 col-start-2"}
         />
         <PagePresentationCard
           cardTitle={"DNE STORE"}
           cardSubtitle={"TOP COLLECTIONS"}
-          cardBackgroundImage={"/card-design-green.png"}
+          cardBackgroundImage={"/design/card-design-green.png"}
           cardContent={PresentationCard_3()}
           css={"col-span-1 col-start-1"}
         />
         <PagePresentationCard
           cardTitle={"DNE AI"}
           cardSubtitle={"FUTURE READY"}
-          cardBackgroundImage={"/card-design-blue.png"}
+          cardBackgroundImage={"/design/card-design-blue.png"}
           cardContent={PresentationCard_4()}
           css={"col-span-1 col-start-2"}
         />
@@ -161,31 +161,27 @@ const Home = () => {
 
       <div className="m-auto pt-26 pb-32 px-29 grid grid-cols-3 text-white">
         <PageStatusCard
-          iconPath={"/check-icon.png"}
+          iconPath={"/icons/check-icon.png"}
           iconAlt={"Status Icon"}
           firstText={"85%"}
           secondText={"of trial-based candidates converted to long-term hires."}
-          css={
-            "tcntt text-sh-effect col-start-1 col-end-2 justify-items-center"
-          }
+          css={"tcntt text-sh-effect col-start-1 col-end-2 "}
         />
         <PageStatusCard
-          iconPath={"/lighting-icon.png"}
+          iconPath={"/icons/lighting-icon.png"}
           iconAlt={"Status Icon"}
           firstText={"40%"}
           secondText={"faster hiring processes with trial placements."}
-          css={
-            "tcntt text-sh-effect col-start-3 col-end-4 justify-items-center"
-          }
+          css={"tcntt text-sh-effect col-start-3 col-end-4 "}
         />
         <PageStatusCard
-          iconPath={"/stats-icon.png"}
+          iconPath={"/icons/stats-icon.png"}
           iconAlt={"Status Icon"}
           firstText={"30%"}
           secondText={
             "turnover reduction by screening through trial-based evaluations."
           }
-          css={"mt-8 col-start-2 justify-items-center"}
+          css={"mt-8 col-start-2 "}
         />
 
         <div className="mt-16 col-span-5 flex flex-col items-center justify-items-center">

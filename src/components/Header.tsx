@@ -6,7 +6,7 @@ const Header = () => {
     <header className="custom-header flex justify-between items-center px-4 py-2">
       <div>
         <Image
-          src="/Digital_Nomad_Logo_White_Transp.png"
+          src="/frames/dne-logo-white.png"
           alt="Footer logo"
           width="80"
           height="30"

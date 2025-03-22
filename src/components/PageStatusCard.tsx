@@ -1,18 +1,28 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 
 interface IPageStatusCard {
   iconPath: string;
   iconAlt: string;
+  titleText?: string;
   firstText?: string;
-  secondText: string;
+  secondText: string | ReactNode;
   css: string;
+  maxWidth?: string;
 }
 
 const PageStatusCard = (props: IPageStatusCard) => {
   return (
     <div className={`${props.css}`}>
-      <div className="h-full flex items-start ">
-        <div className="tcnt relative">
+      {props.titleText ? (
+        <div className="mb-2 text-2xl font-semibold">{props.titleText}</div>
+      ) : null}
+      <div
+        className={`h-full flex ${
+          props.firstText ? "items-start " : "items-center"
+        }`}
+      >
+        <div className={`tcnt relative`}>
           <Image
             src={props.iconPath}
             alt={props.iconAlt}
@@ -31,9 +41,9 @@ const PageStatusCard = (props: IPageStatusCard) => {
 
           <div
             className={`${
-              props.firstText ? "flex flex-grow items-end" : ""
+              props.firstText ? "flex flex-grow items-end" : "h-full"
             } text-gray-300 font-semibold text-sh-effect`}
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: props.maxWidth ? props.maxWidth : "250px" }}
           >
             {props.secondText}
           </div>

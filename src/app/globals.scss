@@ -27,6 +27,7 @@ body {
   margin: 0 auto; /* Centers the content */
   // padding: 0 12px; /* Optional: Adds padding for smaller screens */
   padding-top: 100px;
+  overflow: hidden;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
@@ -55,7 +56,7 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1; /* Above the grid, but behind the header */
-  background-color: #0a0d1c; /* Same background color */
+  background-color: rgb(10, 13, 28); /* Same background color */
 }
 
 .body-bg {
@@ -76,7 +77,7 @@ body {
 
 .custom-header {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
@@ -200,7 +201,17 @@ body {
 }
 
 .tcntt {
-  // box-shadow: 0 -20px 100px rgba(29, 18, 58, 1);
+  .tcnt {
+    box-shadow: 0px -30px 100px rgba(21, 2, 78, 0.9),
+      /* Top */ 0px 20px 100px rgba(21, 2, 75, 0.9); /* Bottom */
+  }
+}
+
+.tcntt-2 {
+  .tcnt {
+    box-shadow: -10px 15px 25px rgba(21, 2, 78, 0.75),
+      /* Top */ 0px 15px 25px rgba(21, 2, 75, 0.75); /* Bottom */
+  }
 }
 
 .tcnt {
@@ -208,8 +219,6 @@ body {
   min-width: 140px;
   height: 140px;
   min-height: 140px;
-  box-shadow: 0px -30px 100px rgba(21, 2, 78, 0.9),
-    /* Top */ 0px 20px 100px rgba(21, 2, 75, 0.9); /* Bottom */
 
   img {
     width: 140px;
@@ -285,4 +294,207 @@ body {
 .frame-clot {
   width: 90%;
   margin: auto;
+}
+
+.d-sphere-container {
+  // TODO redesign after new image
+  width: 600px;
+  height: 550px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -150px; /* Covers the entire container */
+    background: radial-gradient(
+      circle,
+      rgba(48, 8, 148, 0.3) 0%,
+      /* Darker at the center */ rgba(48, 8, 148, 0.2) 40%,
+      /* Soft fading */ rgba(48, 8, 148, 0) 70%
+    );
+    pointer-events: none; /* Allows clicks through the gradient */
+    z-index: 2; /* Ensures it’s above the images */
+  }
+  // rgb(46, 11, 137)
+  .img-1 {
+    width: 80%;
+    height: 80%;
+
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+    z-index: 0;
+  }
+
+  .img-2 {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+  }
+
+  .img-3 {
+    width: 100%;
+    height: 100%;
+
+    //   position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%); /* Centers the image */
+    z-index: 2;
+  }
+
+  .text-1,
+  .text-2,
+  .text-3,
+  .text-4,
+  .text-5,
+  .text-6,
+  .text-1a,
+  .text-2a,
+  .text-3a,
+  .text-4a,
+  .text-5a,
+  .text-6a {
+    position: absolute;
+    z-index: 2;
+
+    background-color: #060911;
+    border: 1.5px solid rgba(47, 56, 94, 1);
+    border-radius: 10px;
+  }
+
+  .text-2,
+  .text-5 {
+    opacity: 0.8;
+    filter: brightness(0.9);
+  }
+
+  .text-1 {
+    top: 150px;
+    left: -40px;
+  }
+
+  .text-2 {
+    top: 250px;
+    left: -100px;
+  }
+
+  .text-3 {
+    top: 350px;
+    left: -60px;
+  }
+
+  .text-4 {
+    top: 120px;
+    right: 0;
+  }
+
+  .text-5 {
+    top: 220px;
+    right: -100px;
+  }
+
+  .text-6 {
+    top: 320px;
+    right: -20px;
+  }
+
+  .text-1a {
+    top: 150px;
+    left: -75px;
+  }
+
+  .text-2a {
+    top: 270px;
+    left: -190px;
+  }
+
+  .text-3a {
+    top: 430px;
+    left: -80px;
+  }
+
+  .text-4a {
+    top: 160px;
+    right: -80px;
+  }
+
+  .text-5a {
+    top: 280px;
+    right: -140px;
+  }
+
+  .text-6a {
+    top: 430px;
+    right: 40px;
+  }
+}
+
+.shadow-top {
+  box-shadow: 0 -50px 40px -40px rgba(57, 40, 100, 0.5);
+}
+
+.d-sphere-container-size {
+  width: 800px;
+  height: 700px;
+}
+
+.d-sphere-container-size-2 {
+  width: 350px;
+  height: auto;
+}
+
+.custom-card-design {
+  background: linear-gradient(
+    15deg,
+    rgba(12, 17, 30, 1) 0%,
+    rgba(12, 17, 30, 1) 50%,
+    rgba(24, 33, 58, 1) 75%,
+    rgba(30, 40, 70, 1) 100%
+  );
+
+  border: 1.5px solid rgba(24, 33, 58, 1);
+  border-radius: 10px;
+}
+
+.use-case-container {
+  img {
+    width: 250px;
+    box-shadow: 0px 20px 75px rgba(21, 2, 75, 0.75);
+  }
+}
+
+.contact-form-container {
+  position: relative;
+  z-index: 1;
+
+  textarea {
+    min-height: 170px;
+    max-height: 170px;
+  }
+
+  input,
+  select,
+  textarea,
+  option {
+    background-color: rgb(7, 9, 20);
+    border: 1.5px solid rgb(34, 41, 58);
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  button {
+    margin-bottom: 10px;
+    border: 1.5px solid rgb(34, 41, 58);
+    border-radius: 10px;
+    padding: 12px;
+    // background-color: rgb(100, 49, 218);
+  }
 }

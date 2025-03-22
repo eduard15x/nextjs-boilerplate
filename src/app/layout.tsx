@@ -41,8 +41,8 @@ export default function RootLayout({
 
         <div className="gradient-top flex items-center justify-center">
           <Image
-            src="/Gradients-top.png"
-            alt={"Gradient Image On Top"}
+            src="/design/gradient-top-design.png"
+            alt={"Gradient Top Effect Frame"}
             width="100"
             height="100"
           />
@@ -55,18 +55,18 @@ export default function RootLayout({
         <div className="relative">
           <div className="gradient-bottom flex items-center justify-center">
             <Image
-              src="/Gradients-Bottom.png"
-              alt={"Gradient Image On Top"}
+              src="/design/gradient-bottom-design.png"
+              alt={"Gradient Bottom Effect Frame"}
               width="100"
               height="100"
             />
           </div>
           <div className="bottom-image pb-8 flex items-center justify-center">
             <Image
-              src="/Digital_Nomad_Logo_Gray_Transp.png"
-              alt={"Gradient Image On Top"}
-              width="100"
-              height="100"
+              src="/frames/dne-logo-gray.png"
+              alt={"Digital Nomad Entertainment Logo Gray"}
+              width={300}
+              height={200}
             />
           </div>
         </div>

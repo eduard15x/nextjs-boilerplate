@@ -13,8 +13,8 @@ const Footer = () => {
             <div className="flex items-center">
               <Link href={""} className="mr-4">
                 <Image
-                  src="/Frame.svg"
-                  alt="Footer logo"
+                  src="/socials/youtube.svg"
+                  alt="Youtube Logo"
                   width="20"
                   height="20"
                   className="w-8 h-7"
@@ -22,8 +22,8 @@ const Footer = () => {
               </Link>
               <Link href={""} className="mr-4">
                 <Image
-                  src="/Frame-1.svg"
-                  alt="Footer logo"
+                  src="/socials/facebook.svg"
+                  alt="Facebook Logo"
                   width="20"
                   height="20"
                   className="w-8 h-7"
@@ -31,8 +31,8 @@ const Footer = () => {
               </Link>
               <Link href={""} className="mr-4">
                 <Image
-                  src="/formkit_instagram.svg"
-                  alt="Footer logo"
+                  src="/socials/instagram.svg"
+                  alt="Instagram Logo"
                   width="20"
                   height="20"
                   className="w-8 h-7"
@@ -40,8 +40,8 @@ const Footer = () => {
               </Link>
               <Link href={""} className="mr-4">
                 <Image
-                  src="/Frame-2.svg"
-                  alt="Footer logo"
+                  src="/socials/linkedin.svg"
+                  alt="LinkedIn Logo"
                   width="20"
                   height="20"
                   className="w-8 h-7"
@@ -49,8 +49,8 @@ const Footer = () => {
               </Link>
               <Link href={""} className="mr-4">
                 <Image
-                  src="/Group.svg"
-                  alt="Footer logo"
+                  src="/socials/x-twitter.svg"
+                  alt="X Logo"
                   width="20"
                   height="20"
                   className="w-8 h-7"
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="col-start-1 col-end-2 ">
           <Image
-            src="/Digital_Nomad_Logo_White_Transp.png"
+            src="/frames/dne-logo-white.png"
             alt="Footer logo"
             width="180"
             height="75"
