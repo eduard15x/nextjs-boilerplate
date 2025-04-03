@@ -142,13 +142,13 @@ const Header = () => {
           >
             Use Cases
           </Link>
-          <Link
+          {/* <Link
             href={"/blog"}
             className="text-gray-100 hover:text-gray-300 py-2 transition-colors duration-200"
             onClick={() => setIsMenuOpen(false)}
           >
             Blog
-          </Link>
+          </Link> */}
           <Link
             href={"/contact"}
             className="text-gray-100 hover:text-gray-300 py-2 transition-colors duration-200"
