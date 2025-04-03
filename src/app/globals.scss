@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./mixins.scss";
 
 :root {
   --background: #ffffff;
@@ -84,7 +85,7 @@ body {
   border: 1.5px solid rgba(47, 56, 94, 1);
   border-radius: 16px;
   background: rgba(24, 33, 58, 1);
-  width: 100%;
+  width: 90%;
   max-width: 925px;
 }
 
@@ -113,17 +114,21 @@ body {
 .gradient-top {
   position: absolute;
   filter: brightness(0.8);
-  opacity: 0.75;
+  opacity: 0.9;
   z-index: -2;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 250%;
   max-width: 1600px;
 
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @include breakpoint(tabletSmall) {
+    width: 100%;
   }
 }
 
@@ -143,17 +148,27 @@ body {
 
 .gradient-bottom {
   position: absolute;
-  opacity: 0.75;
+  opacity: 0.9;
   z-index: -1;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%) scale(1.8);
-  width: 100%;
+  transform: translateX(-50%) scale(3);
+  width: 150%;
   max-width: 1280px;
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
+  }
+
+  @include breakpoint(tabletSmall) {
+    opacity: 0.9;
+    transform: translateX(-50%) scale(1.8);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -164,24 +179,61 @@ body {
 .bottom-image {
   opacity: 0.25;
   img {
-    width: 100%;
+    width: 75%;
     max-width: 500px;
+
+    @include breakpoint(tabletSmall) {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
+
+.d-custom-none {
+  display: none;
+
+  @include breakpoint(tabletSmall) {
+    display: block;
   }
 }
 
 .text-title {
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 24px;
+  line-height: 28px;
+
+  @include breakpoint(tabletSmall) {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+.text-title-custom {
+  font-size: 18px;
+  line-height: 22px;
+
+  @include breakpoint(tabletSmall) {
+    font-size: 40px;
+    line-height: 46px;
+  }
 }
 
 .text-title-xs {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 14px;
+  line-height: 20px;
+  @include breakpoint(tabletSmall) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 .text-title-sm {
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 20px;
+  line-height: 24px;
+
+  @include breakpoint(tabletSmall) {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .text-title-lg {
@@ -190,8 +242,12 @@ body {
 }
 
 .text-title-xl {
-  font-size: 48px;
-  line-height: 54px;
+  font-size: 24px;
+  line-height: 28px;
+  @include breakpoint(tabletSmall) {
+    font-size: 48px;
+    line-height: 54px;
+  }
 }
 
 .status-group {
@@ -201,30 +257,48 @@ body {
 }
 
 .tcntt {
-  .tcnt {
-    box-shadow: 0px -30px 100px rgba(21, 2, 78, 0.9),
-      /* Top */ 0px 20px 100px rgba(21, 2, 75, 0.9); /* Bottom */
+  @include breakpoint(tabletSmall) {
+    .tcnt {
+      box-shadow: 0px -30px 100px rgba(21, 2, 78, 0.9),
+        /* Top */ 0px 20px 100px rgba(21, 2, 75, 0.9); /* Bottom */
+    }
   }
 }
 
 .tcntt-2 {
-  .tcnt {
-    box-shadow: -10px 15px 25px rgba(21, 2, 78, 0.75),
-      /* Top */ 0px 15px 25px rgba(21, 2, 75, 0.75); /* Bottom */
+  @include breakpoint(tabletSmall) {
+    .tcnt {
+      box-shadow: -10px 15px 25px rgba(21, 2, 78, 0.75),
+        /* Top */ 0px 15px 25px rgba(21, 2, 75, 0.75); /* Bottom */
+    }
   }
 }
 
 .tcnt {
-  width: 140px;
-  min-width: 140px;
-  height: 140px;
-  min-height: 140px;
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
+  min-height: 120px;
 
-  img {
+  @include breakpoint(tabletSmall) {
     width: 140px;
     min-width: 140px;
     height: 140px;
     min-height: 140px;
+  }
+
+  img {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    min-height: 120px;
+
+    @include breakpoint(tabletSmall) {
+      width: 140px;
+      min-width: 140px;
+      height: 140px;
+      min-height: 140px;
+    }
     // transform: scale(1.1);
   }
 }
@@ -262,7 +336,7 @@ body {
 }
 
 .custom-btn {
-  background: rgba(24, 33, 58, 1);
+  background: rgb(11, 15, 26);
   border: 1.5px solid rgba(47, 56, 94, 1);
   border-radius: 10px;
 }
@@ -276,36 +350,55 @@ body {
 .style_1,
 .style_2 {
   position: absolute;
-  width: 325px;
+  width: 175px;
+
+  @include breakpoint(tabletSmall) {
+    width: 325px;
+  }
 }
 
 .style_1 {
-  top: 0;
+  top: 40px;
   left: 0;
   z-index: 5;
+  @include breakpoint(tabletSmall) {
+    top: 0;
+  }
 }
 
 .style_2 {
   bottom: 0;
   right: 0;
   z-index: 4;
+  @include breakpoint(tabletSmall) {
+    bottom: 0;
+  }
 }
 
 .frame-clot {
-  width: 90%;
   margin: auto;
+  width: 80%;
+
+  @include breakpoint(tabletSmall) {
+    width: 90%;
+  }
 }
 
 .d-sphere-container {
   // TODO redesign after new image
-  width: 600px;
-  height: 550px;
+  width: 170px;
+  height: 130px;
   position: relative;
+
+  @include breakpoint(tabletSmall) {
+    width: 600px;
+    height: 550px;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    inset: -150px; /* Covers the entire container */
+    inset: -80px;
     background: radial-gradient(
       circle,
       rgba(48, 8, 148, 0.3) 0%,
@@ -314,11 +407,19 @@ body {
     );
     pointer-events: none; /* Allows clicks through the gradient */
     z-index: 2; /* Ensures it’s above the images */
+
+    @include breakpoint(tabletSmall) {
+      inset: -150px;
+    }
   }
   // rgb(46, 11, 137)
   .img-1 {
     width: 80%;
-    height: 80%;
+    height: 100%;
+    @include breakpoint(tabletSmall) {
+      width: 80%;
+      height: 80%;
+    }
 
     object-fit: cover;
     position: absolute;
@@ -326,6 +427,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the image */
     z-index: 0;
+  }
+
+  .img-1-custom-about-us {
+    width: 60%;
+    height: 80%;
+    @include breakpoint(tabletSmall) {
+      width: 80%;
+      height: 80%;
+    }
   }
 
   .img-2 {
@@ -340,9 +450,13 @@ body {
   }
 
   .img-3 {
-    width: 100%;
+    width: 80%;
     height: 100%;
 
+    @include breakpoint(tabletSmall) {
+      width: 100%;
+      height: 100%;
+    }
     //   position: absolute;
     // top: 50%;
     // left: 50%;
@@ -367,7 +481,14 @@ body {
 
     background-color: #060911;
     border: 1.5px solid rgba(47, 56, 94, 1);
-    border-radius: 10px;
+    border-radius: 4px;
+
+    font-size: 8px !important;
+
+    @include breakpoint(tabletSmall) {
+      font-size: 16px !important;
+      border-radius: 10px;
+    }
   }
 
   .text-2,
@@ -377,63 +498,112 @@ body {
   }
 
   .text-1 {
-    top: 150px;
-    left: -40px;
+    top: 30px;
+    left: -60px;
+
+    @include breakpoint(tabletSmall) {
+      top: 150px;
+      left: -40px;
+    }
   }
 
   .text-2 {
-    top: 250px;
-    left: -100px;
+    top: 60px;
+    left: -70px;
+    @include breakpoint(tabletSmall) {
+      top: 250px;
+      left: -100px;
+    }
   }
 
   .text-3 {
-    top: 350px;
+    top: 90px;
     left: -60px;
+    @include breakpoint(tabletSmall) {
+      top: 350px;
+      left: -60px;
+    }
   }
 
   .text-4 {
-    top: 120px;
-    right: 0;
+    top: 25px;
+    right: -35px;
+    @include breakpoint(tabletSmall) {
+      top: 120px;
+      right: 0;
+    }
   }
 
   .text-5 {
-    top: 220px;
-    right: -100px;
+    top: 55px;
+    right: -70px;
+    @include breakpoint(tabletSmall) {
+      top: 220px;
+      right: -100px;
+    }
   }
 
   .text-6 {
-    top: 320px;
-    right: -20px;
+    top: 80px;
+    right: -35px;
+    @include breakpoint(tabletSmall) {
+      top: 320px;
+      right: -20px;
+    }
   }
 
   .text-1a {
-    top: 150px;
-    left: -75px;
+    top: 36px;
+    left: -70px;
+    @include breakpoint(tabletSmall) {
+      top: 150px;
+      left: -75px;
+    }
   }
 
   .text-2a {
-    top: 270px;
-    left: -190px;
+    top: 65px;
+    left: -70px;
+    @include breakpoint(tabletSmall) {
+      top: 270px;
+      left: -190px;
+    }
   }
 
   .text-3a {
-    top: 430px;
-    left: -80px;
+    top: 95px;
+    left: -55px;
+    @include breakpoint(tabletSmall) {
+      top: 430px;
+      left: -80px;
+    }
   }
 
   .text-4a {
-    top: 160px;
-    right: -80px;
+    top: 30px;
+    right: -60px;
+    @include breakpoint(tabletSmall) {
+      top: 160px;
+      right: -80px;
+    }
   }
 
   .text-5a {
-    top: 280px;
-    right: -140px;
+    top: 65px;
+    right: -60px;
+    @include breakpoint(tabletSmall) {
+      top: 280px;
+      right: -140px;
+    }
   }
 
   .text-6a {
-    top: 430px;
-    right: 40px;
+    top: 105px;
+    right: 0px;
+    @include breakpoint(tabletSmall) {
+      top: 430px;
+      right: 40px;
+    }
   }
 }
 
@@ -442,8 +612,13 @@ body {
 }
 
 .d-sphere-container-size {
-  width: 800px;
-  height: 700px;
+  width: 300px;
+  height: 200px;
+
+  @include breakpoint(tabletSmall) {
+    width: 800px;
+    height: 700px;
+  }
 }
 
 .d-sphere-container-size-2 {
@@ -466,7 +641,11 @@ body {
 
 .use-case-container {
   img {
-    width: 250px;
+    width: 100px;
+
+    @include breakpoint(tabletSmall) {
+      width: 250px;
+    }
     box-shadow: 0px 20px 75px rgba(21, 2, 75, 0.75);
   }
 }
@@ -487,7 +666,11 @@ body {
     background-color: rgb(7, 9, 20);
     border: 1.5px solid rgb(34, 41, 58);
     border-radius: 10px;
-    padding: 12px;
+    padding: 8px;
+
+    @include breakpoint(tabletSmall) {
+      padding: 12px;
+    }
   }
 
   button {
@@ -496,5 +679,52 @@ body {
     border-radius: 10px;
     padding: 12px;
     // background-color: rgb(100, 49, 218);
+  }
+}
+
+.card-responsive {
+  min-height: 340px;
+  max-height: 400px;
+
+  @include breakpoint(tabletSmall) {
+    min-height: 540px;
+    max-height: 600px;
+  }
+}
+
+.custom-page-status-card-center {
+  @include breakpoint(tabletSmallMax) {
+    align-items: center !important;
+  }
+}
+
+.custom-page-status-card-start {
+  @include breakpoint(tabletSmallMax) {
+    align-items: flex-start !important;
+  }
+}
+
+.custom-small-title {
+  @include breakpoint(tabletSmallMax) {
+    font-size: 17px;
+  }
+}
+
+.footer-icon {
+  width: 28px;
+  height: 24px;
+  @include breakpoint(tabletSmall) {
+    width: 34px;
+    height: 30px;
+  }
+}
+
+.custom-arrange-item {
+  align-items: center !important;
+}
+
+.custom-arrange-item-responsive {
+  @include breakpoint(tabletSmallMax) {
+    align-items: center !important;
   }
 }

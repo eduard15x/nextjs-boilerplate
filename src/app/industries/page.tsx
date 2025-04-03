@@ -8,17 +8,18 @@ export const metadata = {
 
 const Industries = () => {
   return (
-    <div className="mb-24">
+    <div className="mb-16 md:mb-24">
       <PageInfo
         title={
           <>
-            Tailored Workforce Solutions <br /> for Every Industry
+            Tailored Workforce Solutions <br className="d-custom-none" />
+            for Every Industry
           </>
         }
         description="From tech startups to manufacturing, our flexible hiring and HR solutions help you scale efficiently, reduce turnover, and meet deadlines—whether on-site, remote, or hybrid."
       />
 
-      <div className="d-sphere-container d-sphere-container-size -mt-16 mb-16 mx-auto text-white">
+      <div className="d-sphere-container d-sphere-container-size mt-4 md:-mt-16 mb-16 mx-auto text-white">
         <Image
           src={"/frames/frame-circuit-3d.png"}
           alt={"3D Sphere Image"}
@@ -37,8 +38,8 @@ const Industries = () => {
         titleCss="text-title-sm"
       />
 
-      <div className="grid grid-cols-2 mt-16 mb-24 m-auto px-32 gap-y-12 gap-x-32 text-white">
-        <div className="col-start-1 col-end-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:mt-16 mb-18 md:mb-24 m-auto px-2 md:px-32 md:gap-y-12 md:gap-x-32 text-white">
+        <div className="md:col-start-1 md:col-end-2">
           <PageStatusCard
             iconPath={"/icons/people-icon.png"}
             iconAlt={"Status Icon"}
@@ -50,11 +51,14 @@ const Industries = () => {
                 solutions.
               </>
             }
-            css={"tcntt-2 text-sh-effect"}
+            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
+            arrangeItem="custom-arrange-item"
+            titleCss="text-center text-title-xs"
+            secondTextCss="text-center text-sm"
           />
         </div>
-        <div className="col-start-2 col-end-3">
+        <div className="md:col-start-2 md:col-end-3">
           <PageStatusCard
             iconPath={"/icons/clock-icon.png"}
             iconAlt={"Status Icon"}
@@ -66,11 +70,14 @@ const Industries = () => {
                 the location.
               </>
             }
-            css={"tcntt-2 text-sh-effect "}
+            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
+            arrangeItem="custom-arrange-item"
+            titleCss="text-center text-title-xs"
+            secondTextCss="text-center text-sm"
           />
         </div>
-        <div className="col-start-1 col-end-2">
+        <div className="md:col-start-1 md:col-end-2">
           <PageStatusCard
             iconPath={"/icons/hand-shake-icon.png"}
             iconAlt={"Status Icon"}
@@ -81,11 +88,14 @@ const Industries = () => {
                 while reducing turnover—primarily on-site roles.
               </>
             }
-            css={"tcntt-2 text-sh-effect"}
+            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
+            arrangeItem="custom-arrange-item"
+            titleCss="text-center text-title-xs"
+            secondTextCss="text-center text-sm"
           />
         </div>
-        <div className="col-start-2 col-end-3">
+        <div className="md:col-start-2 md:col-end-3">
           <PageStatusCard
             iconPath={"/icons/dollar-icon.png"}
             iconAlt={"Status Icon"}
@@ -96,15 +106,18 @@ const Industries = () => {
                 sustainable growth with on-site hires and remote flexibility.
               </>
             }
-            css={"tcntt-2 text-sh-effect "}
+            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
+            arrangeItem="custom-arrange-item"
+            titleCss="text-center text-title-xs"
+            secondTextCss="text-center text-sm"
           />
         </div>
       </div>
 
-      <PageInfo title="Numbers don't lie" titleCss="text-title-xs" />
+      <PageInfo title="Numbers don't lie" titleCss="text-title" />
 
-      <div className="m-auto pt-26 mb-40 grid grid-cols-3 text-white">
+      <div className="m-auto pt-6 md:pt-26 mb-16 md:mb-40 grid grid-cols-1 md:grid-cols-3 text-white">
         <PageStatusCard
           iconPath={"/icons/pueple-dollar-icon.png"}
           iconAlt={"Status Icon"}
@@ -112,7 +125,11 @@ const Industries = () => {
           secondText={
             "Manufacturer saves $150,000 annually by trialing candidates before full-time offers."
           }
-          css={"tcntt col-start-1 col-end-2 justify-items-center"}
+          css={
+            "tcntt mt-8 md:mt-0 md:col-start-1 md:col-end-2 justify-items-center"
+          }
+          arrangeItem="text-center"
+          secondTextCss="text-sm"
         />
         <PageStatusCard
           iconPath={"/icons/stats-icon.png"}
@@ -121,7 +138,11 @@ const Industries = () => {
           secondText={
             "Tech startup reduces hiring time by 40% with trial-based candidates."
           }
-          css={"tcntt col-start-3 col-end-4 justify-items-center"}
+          css={
+            "tcntt mt-8 md:mt-0 md:col-start-3 md:col-end-4 justify-items-center"
+          }
+          arrangeItem="text-center"
+          secondTextCss="text-sm"
         />
         <PageStatusCard
           iconPath={"/icons/rocket-icon.png"}
@@ -129,10 +150,12 @@ const Industries = () => {
           secondText={
             "Creative agency delivers project early by integrating trial candidates and co-development resources."
           }
-          css={"tcntt mt-8 col-start-2 justify-items-center"}
+          css={"tcntt mt-8 md:mt-0 mt-8 md:col-start-2 justify-items-center"}
+          arrangeItem="text-center custom-arrange-item"
+          secondTextCss="text-sm"
         />
 
-        <div className="mt-16 col-span-5 flex flex-col items-center justify-items-center">
+        <div className="mt-12 md:mt-16 md:col-span-5 flex flex-col items-center justify-items-center">
           <div className="custom-btn px-5 py-1 cursor-pointer hover:brightness-120 text-white font-semibold">
             Case Studies{" "}
             <span className="ml-2 font-bold" aria-hidden="true">
@@ -140,7 +163,7 @@ const Industries = () => {
             </span>
           </div>
 
-          <div className="mt-2 text-gray-300">
+          <div className="mt-2 text-sm md:text-base text-gray-300">
             For more detailed success stories.
           </div>
         </div>
@@ -154,6 +177,7 @@ const Industries = () => {
         }
         titleCss="text-title-sm"
         description="Contact us today."
+        descriptionCss="mb-4 md:mb-0"
         buttonText="Learn More"
       />
     </div>

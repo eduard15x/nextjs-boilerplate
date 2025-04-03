@@ -7,7 +7,7 @@ const Blog = () => {
     <div>
       <h1 className="text-white">Blog</h1>
 
-      <div className="my-16 text-white">Blog coming soon.</div>
+      <div className="my-16 text-white">Blog page in working.</div>
     </div>
   );
 };

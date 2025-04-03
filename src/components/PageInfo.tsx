@@ -22,17 +22,17 @@ const PageInfo = (props: IPageInfo) => {
 
       {props.description ? (
         <div
-          className={`w-1/2 mt-4 m-auto text-gray-300 ${props.descriptionCss}`}
+          className={`px-2 sm:w-1/2 mt-2 md:mt-4 text-sm md:text-base m-auto text-gray-300 ${props.descriptionCss}`}
         >
           {props.description}
         </div>
       ) : null}
 
-      <div className="flex justify-center">
+      <div className="flex flex-col md:flex-row justify-center items-center">
         {props.buttonText ? (
           <button
             className={`${
-              props.buttonMargins ? props.buttonMargins : "mt-8 mb-2"
+              props.buttonMargins ? props.buttonMargins : "mt-6 md:mt-8 mb-2"
             } btn-gradient hover:brightness-120 text-white font-semibold cursor-pointer py-1 px-4 rounded-lg`}
           >
             {props.buttonText}
@@ -44,8 +44,8 @@ const PageInfo = (props: IPageInfo) => {
             className={`${
               props.secondButtonMargins
                 ? props.secondButtonMargins
-                : "mt-8 mb-2"
-            } custom-btn hover:brightness-120 text-white font-semibold cursor-pointer py-1 px-4 ml-6 rounded-lg`}
+                : "mt-2 md:mt-8 mb-2"
+            } custom-btn hover:brightness-120 text-white font-semibold cursor-pointer py-1 px-4 md:ml-6 rounded-lg`}
           >
             {props.secondButtonText}
             <span className="ml-2 font-bold" aria-hidden="true">

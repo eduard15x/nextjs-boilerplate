@@ -8,14 +8,14 @@ export const metadata = {
 
 const Services = () => {
   return (
-    <div className="mb-24">
+    <div className="mb-14 md:mb-24">
       <PageInfo
         title={
           "Smart Workforce Management, Talent Acquisition, HR Solutions, and Co-Development Partnerships"
         }
       />
 
-      <div className="d-sphere-container my-16 mx-auto text-white">
+      <div className="d-sphere-container my-10 md:my-16 mx-auto text-white">
         <Image
           src={"/frames/frame-sphere-3d.png"}
           alt={"3D Sphere Frame"}
@@ -24,32 +24,36 @@ const Services = () => {
           height={400}
         />
 
-        <div className="text-1 px-3 py-1 text-gray-200">
+        <div className="text-1 px-1 md:px-3 md:py-1 text-gray-200">
           AI-Powered Workforce
         </div>
-        <div className="text-2 px-3 py-1 text-gray-400">
+        <div className="text-2 px-1 md:px-3 md:py-1 text-gray-400">
           Zero Downtime Teams
         </div>
-        <div className="text-3 px-3 py-1 text-gray-200">
+        <div className="text-3 px-1 md:px-3 md:py-1 text-gray-200">
           Hire Smarted, Work Faster
         </div>
-        <div className="text-4 px-3 py-1 text-gray-200">Seamless Scaling</div>
-        <div className="text-5 px-3 py-1 text-gray-400">
+        <div className="text-4 px-1 md:px-3 md:py-1 text-gray-200">
+          Seamless Scaling
+        </div>
+        <div className="text-5 px-1 md:px-3 md:py-1 text-gray-400">
           Optimize & Accelerate
         </div>
-        <div className="text-6 px-3 py-1 text-gray-200">10x Faster Hiring</div>
+        <div className="text-6 px-1 md:px-3 md:py-1 text-gray-200">
+          10x Faster Hiring
+        </div>
       </div>
 
-      <div className="mb-32 m-auto grid grid-cols-2 pt-10 px-32 text-white">
-        <div className="col-span-2">
-          <div className="ml-25 text-title-sm">
+      <div className="pb-16 md:mb-32 m-auto grid grid-cols-1 md:grid-cols-2 pt-8 md:pt-10 md:px-32 text-white">
+        <div className="pb-8 md:pb-0 md:col-span-2">
+          <div className="ml-4 md:ml-25 text-title-sm">
             OPTIMIZE, HIRE, AND
             <br />
             SCALE WITH CONFIDENCE
           </div>
         </div>
 
-        <div className="col-span-1 col-start-2 shadow-top">
+        <div className="px-4 md:px-0 md:col-span-1 md:col-start-2 shadow-top">
           <PageStatusCard
             iconPath={"/icons/hand-shake-icon.png"}
             iconAlt={"Hand Shake Icon"}
@@ -63,7 +67,9 @@ const Services = () => {
                 decisions.
               </>
             }
-            css={"tcntt-2 text-sh-effect col-start-3 col-end-4 text-sm mt-8"}
+            css={
+              "tcntt-2 text-sh-effect md:col-start-3 md:col-end-4 text-sm mt-8"
+            }
             maxWidth="350px"
           />
           <PageStatusCard
@@ -120,6 +126,7 @@ const Services = () => {
         description="Contact us today."
         buttonText="Request a Consultation"
         secondButtonText="Learn more"
+        titleCss="text-title-sm px-2"
       />
     </div>
   );

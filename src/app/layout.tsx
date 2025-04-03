@@ -48,7 +48,7 @@ export default function RootLayout({
           />
         </div>
 
-        <main className="flex-1 pt-20 w-full max-content-size m-auto main-min-height">
+        <main className="flex-1 pt-8 md:pt-20 w-full max-content-size m-auto main-min-height">
           {children}
         </main>
 
@@ -70,6 +70,7 @@ export default function RootLayout({
             />
           </div>
         </div>
+
         <Footer />
       </body>
     </html>
