@@ -54,8 +54,8 @@ const Industries = () => {
             css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
-            titleCss="text-center text-title-xs"
-            secondTextCss="text-center text-sm"
+            titleCss="text-center md:text-start text-title-xs"
+            secondTextCss="text-center md:text-start text-sm"
           />
         </div>
         <div className="md:col-start-2 md:col-end-3">
@@ -73,8 +73,8 @@ const Industries = () => {
             css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
-            titleCss="text-center text-title-xs"
-            secondTextCss="text-center text-sm"
+            titleCss="text-center md:text-start text-title-xs"
+            secondTextCss="text-center md:text-start text-sm"
           />
         </div>
         <div className="md:col-start-1 md:col-end-2">
@@ -91,8 +91,8 @@ const Industries = () => {
             css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
-            titleCss="text-center text-title-xs"
-            secondTextCss="text-center text-sm"
+            titleCss="text-center md:text-start text-title-xs"
+            secondTextCss="text-center md:text-start text-sm"
           />
         </div>
         <div className="md:col-start-2 md:col-end-3">
@@ -109,8 +109,8 @@ const Industries = () => {
             css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
-            titleCss="text-center text-title-xs"
-            secondTextCss="text-center text-sm"
+            titleCss="text-center md:text-start text-title-xs"
+            secondTextCss="text-center md:text-start text-sm"
           />
         </div>
       </div>

@@ -168,6 +168,7 @@ const Home = () => {
           firstText={"85%"}
           secondText={"of trial-based candidates converted to long-term hires."}
           css={"tcntt text-sh-effect md:col-start-1 md:col-end-2"}
+          arrangeItem="text-center"
         />
         <PageStatusCard
           iconPath={"/icons/lighting-icon.png"}
@@ -175,6 +176,7 @@ const Home = () => {
           firstText={"40%"}
           secondText={"faster hiring processes with trial placements."}
           css={"tcntt text-sh-effect md:col-start-3 md:col-end-4 my-12 md:my-0"}
+          arrangeItem="text-center"
         />
         <PageStatusCard
           iconPath={"/icons/stats-icon.png"}
@@ -184,6 +186,7 @@ const Home = () => {
             "turnover reduction by screening through trial-based evaluations."
           }
           css={"md:mt-8 md:col-start-2 "}
+          arrangeItem="text-center"
         />
 
         <div className="mt-12 md:mt-16 md:col-span-5 flex flex-col items-center justify-items-center">
