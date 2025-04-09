@@ -1,6 +1,44 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const FOOTER_LINKS = [
+  {
+    href: "",
+    linkClassName: "mr-4",
+    imageSrc: "/socials/youtube.svg",
+    imageAlt: "Youtube Logo",
+    imageClassName: "footer-icon",
+  },
+  {
+    href: "",
+    linkClassName: "mr-4",
+    imageSrc: "/socials/facebook.svg",
+    imageAlt: "Facebook Logo",
+    imageClassName: "footer-icon",
+  },
+  {
+    href: "",
+    linkClassName: "mr-4",
+    imageSrc: "/socials/instagram.svg",
+    imageAlt: "Instagram Logo",
+    imageClassName: "footer-icon",
+  },
+  {
+    href: "",
+    linkClassName: "mr-4",
+    imageSrc: "/socials/linkedin.svg",
+    imageAlt: "LinkedIn Logo",
+    imageClassName: "footer-icon",
+  },
+  {
+    href: "",
+    linkClassName: "mr-4",
+    imageSrc: "/socials/x-twitter.svg",
+    imageAlt: "X Logo",
+    imageClassName: "footer-icon",
+  },
+];
+
 const Footer = () => {
   return (
     <footer className="footer-bg pt-6 md:pt-12 pb-4 md:pb-8 px-4 md:px-8">
@@ -11,51 +49,21 @@ const Footer = () => {
               Stay Connected
             </div>
             <div className="flex items-center">
-              <Link href={""} className="mr-4">
-                <Image
-                  src="/socials/youtube.svg"
-                  alt="Youtube Logo"
-                  width="100"
-                  height="100"
-                  className="footer-icon"
-                />
-              </Link>
-              <Link href={""} className="mr-4">
-                <Image
-                  src="/socials/facebook.svg"
-                  alt="Facebook Logo"
-                  width="100"
-                  height="100"
-                  className="footer-icon"
-                />
-              </Link>
-              <Link href={""} className="mr-4">
-                <Image
-                  src="/socials/instagram.svg"
-                  alt="Instagram Logo"
-                  width="100"
-                  height="100"
-                  className="footer-icon"
-                />
-              </Link>
-              <Link href={""} className="mr-4">
-                <Image
-                  src="/socials/linkedin.svg"
-                  alt="LinkedIn Logo"
-                  width="100"
-                  height="100"
-                  className="footer-icon"
-                />
-              </Link>
-              <Link href={""} className="mr-4">
-                <Image
-                  src="/socials/x-twitter.svg"
-                  alt="X Logo"
-                  width="100"
-                  height="100"
-                  className="footer-icon"
-                />
-              </Link>
+              {FOOTER_LINKS.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className={item.linkClassName}
+                >
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    width="100"
+                    height="100"
+                    className={item.imageClassName}
+                  />
+                </Link>
+              ))}
             </div>
           </div>
         </div>

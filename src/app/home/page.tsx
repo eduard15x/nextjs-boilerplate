@@ -35,14 +35,14 @@ const PresentationCard_2 = (): ReactNode => {
       </div>
       <div className="z-3 relative h-50 md:h-75">
         <Image
-          className={"style_1"}
+          className={"frame-newmoon-img"}
           src={"/frames/frame-newmoon-1.png"}
           alt={"Newmoon Site Page Capture"}
           width={300}
           height={200}
         />
         <Image
-          className={"style_2"}
+          className={"frame-newmoon-img-2"}
           src={"/frames/frame-newmoon-2.png"}
           alt={"Newmoon Site Page Capture"}
           width={300}
@@ -67,7 +67,7 @@ const PresentationCard_3 = (): ReactNode => {
       </div>
 
       <Image
-        className="frame-clot"
+        className="frame-clothes-img"
         src={"/frames/frame-clothes.png"}
         alt={""}
         width={500}
@@ -167,7 +167,7 @@ const Home = () => {
           iconAlt={"Status Icon"}
           firstText={"85%"}
           secondText={"of trial-based candidates converted to long-term hires."}
-          css={"tcntt text-sh-effect md:col-start-1 md:col-end-2"}
+          css={"card-effect text-sh-effect md:col-start-1 md:col-end-2"}
           arrangeItem="text-center"
         />
         <PageStatusCard
@@ -175,7 +175,9 @@ const Home = () => {
           iconAlt={"Status Icon"}
           firstText={"40%"}
           secondText={"faster hiring processes with trial placements."}
-          css={"tcntt text-sh-effect md:col-start-3 md:col-end-4 my-12 md:my-0"}
+          css={
+            "card-effect text-sh-effect md:col-start-3 md:col-end-4 my-12 md:my-0"
+          }
           arrangeItem="text-center"
         />
         <PageStatusCard

@@ -33,7 +33,7 @@ const PageStatusCard = (props: IPageStatusCard) => {
             : "items-center custom-page-status-card-start"
         } ${props.arrangeItem ? props.arrangeItem : ""}`}
       >
-        <div className={`tcnt tcnt-img relative`}>
+        <div className={`image-wrapper relative`}>
           <Image
             src={props.iconPath}
             alt={props.iconAlt}

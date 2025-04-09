@@ -54,7 +54,7 @@ const AboutUs = () => {
               </>
             }
             secondTextCss="text-sm md:text-base"
-            css={"tcntt-2 text-sh-effect"}
+            css={"card-effect-second text-sh-effect"}
             maxWidth="310px"
             arrangeItem="custom-arrange-item-responsive"
           />
@@ -72,7 +72,7 @@ const AboutUs = () => {
               </>
             }
             secondTextCss="text-sm md:text-base"
-            css={"tcntt-2 text-sh-effect"}
+            css={"card-effect-second text-sh-effect"}
             maxWidth="310px"
             arrangeItem="custom-arrange-item-responsive"
           />

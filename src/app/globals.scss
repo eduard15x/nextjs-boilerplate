@@ -1,17 +1,11 @@
 @import "tailwindcss";
-@import "./mixins.scss";
+@import "./styles/mixins.scss";
+@import "./styles/helpers.scss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-
-// @theme inline {
-//   --color-background: var(--background);
-//   --color-foreground: var(--foreground);
-//   --font-sans: var(--font-geist-sans);
-//   --font-mono: var(--font-geist-mono);
-// }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -25,30 +19,14 @@ html {
 }
 
 body {
-  margin: 0 auto; /* Centers the content */
-  // padding: 0 12px; /* Optional: Adds padding for smaller screens */
+  margin: 0 auto;
   padding-top: 100px;
   overflow: hidden;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
+  background-color: #010409;
 }
-// .grid-background {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   z-index: -2; /* Behind everything */
-
-//   background-image: linear-gradient(
-//       rgba(255, 255, 255, 0.1) 1px,
-//       transparent 1px
-//     ),
-//     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-//   background-size: 50px 50px;
-//   background-color: #0a0d1c; /* Dark background */
-// }
 
 .background-overlay {
   position: fixed;
@@ -60,16 +38,8 @@ body {
   background-color: rgb(10, 13, 28); /* Same background color */
 }
 
-.body-bg {
-  background-color: #010409;
-}
-
 .max-content-size {
   max-width: 1440px;
-}
-
-.html-bg {
-  background-color: #1a1a1c;
 }
 
 .footer-bg {
@@ -91,20 +61,6 @@ body {
 
 .page-info {
   max-width: 925px;
-}
-
-.test-1 {
-  width: 300px;
-  height: 400px;
-  /* Gradient in RGBA */
-  background: linear-gradient(
-    to right,
-    rgba(21, 28, 49, 1) 0%,
-    24.285714328289032%,
-    rgba(7, 10, 20, 1) 48.571428656578064%,
-    74.28571432828903%,
-    rgba(40, 36, 209, 1) 100%
-  );
 }
 
 .btn-gradient {
@@ -130,20 +86,6 @@ body {
   @include breakpoint(tabletSmall) {
     width: 100%;
   }
-}
-
-.grid-background-2 {
-  position: relative; /* Keeps it inside its parent */
-  // width: 100%; /* Full width */
-  // height: 100vh; /* Full height */
-
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-color: transparent; /* Keeps it as an overlay */
 }
 
 .gradient-bottom {
@@ -189,92 +131,31 @@ body {
   }
 }
 
-.d-custom-none {
-  display: none;
-
-  @include breakpoint(tabletSmall) {
-    display: block;
-  }
-}
-
-.text-title {
-  font-size: 24px;
-  line-height: 28px;
-
-  @include breakpoint(tabletSmall) {
-    font-size: 40px;
-    line-height: 46px;
-  }
-}
-
-.text-title-custom {
-  font-size: 18px;
-  line-height: 22px;
-
-  @include breakpoint(tabletSmall) {
-    font-size: 40px;
-    line-height: 46px;
-  }
-}
-
-.text-title-xs {
-  font-size: 14px;
-  line-height: 20px;
-  @include breakpoint(tabletSmall) {
-    font-size: 30px;
-    line-height: 36px;
-  }
-}
-
-.text-title-sm {
-  font-size: 20px;
-  line-height: 24px;
-
-  @include breakpoint(tabletSmall) {
-    font-size: 36px;
-    line-height: 42px;
-  }
-}
-
-.text-title-lg {
-  font-size: 44px;
-  line-height: 60px;
-}
-
-.text-title-xl {
-  font-size: 24px;
-  line-height: 28px;
-  @include breakpoint(tabletSmall) {
-    font-size: 48px;
-    line-height: 54px;
-  }
-}
-
 .status-group {
   width: 100px;
   height: 100px;
   background: linear-gradient(180deg, #090c15 8.11%, #04070f 100%);
 }
 
-.tcntt {
+.card-effect {
   @include breakpoint(tabletSmall) {
-    .tcnt {
+    .image-wrapper {
       box-shadow: 0px -30px 100px rgba(21, 2, 78, 0.9),
         /* Top */ 0px 20px 100px rgba(21, 2, 75, 0.9); /* Bottom */
     }
   }
 }
 
-.tcntt-2 {
+.card-effect-second {
   @include breakpoint(tabletSmall) {
-    .tcnt {
+    .image-wrapper {
       box-shadow: -10px 15px 25px rgba(21, 2, 78, 0.75),
         /* Top */ 0px 15px 25px rgba(21, 2, 75, 0.75); /* Bottom */
     }
   }
 }
 
-.tcnt {
+.image-wrapper {
   width: 120px;
   min-width: 120px;
   height: 120px;
@@ -299,23 +180,7 @@ body {
       height: 140px;
       min-height: 140px;
     }
-    // transform: scale(1.1);
   }
-}
-
-.sts-gr {
-  width: 75px;
-  min-width: 75px;
-  height: 75px;
-  min-height: 75px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.bg-c-transparent {
-  background-color: #010409;
 }
 
 .special-percentage {
@@ -331,10 +196,6 @@ body {
   background-clip: text;
 }
 
-.text-sh-effect {
-  text-shadow: 0 -35px 50px rgb(46, 11, 137);
-}
-
 .custom-btn {
   background: rgb(11, 15, 26);
   border: 1.5px solid rgba(47, 56, 94, 1);
@@ -347,8 +208,8 @@ body {
   border-radius: 10px;
 }
 
-.style_1,
-.style_2 {
+.frame-newmoon-img,
+.frame-newmoon-img-2 {
   position: absolute;
   width: 65%;
 
@@ -357,7 +218,7 @@ body {
   }
 }
 
-.style_1 {
+.frame-newmoon-img {
   top: 50px;
   left: 0;
   z-index: 5;
@@ -382,7 +243,7 @@ body {
   }
 }
 
-.style_2 {
+.frame-newmoon-img-2 {
   bottom: 0;
   right: 0;
   z-index: 4;
@@ -392,7 +253,7 @@ body {
   }
 }
 
-.frame-clot {
+.frame-clothes-img {
   margin: auto;
   width: 80%;
 
@@ -406,7 +267,6 @@ body {
 }
 
 .d-sphere-container {
-  // TODO redesign after new image
   width: 170px;
   height: 130px;
   position: relative;
@@ -628,10 +488,6 @@ body {
   }
 }
 
-.shadow-top {
-  box-shadow: 0 -50px 40px -40px rgba(57, 40, 100, 0.5);
-}
-
 .d-sphere-container-size {
   width: 300px;
   height: 200px;
@@ -699,7 +555,6 @@ body {
     border: 1.5px solid rgb(34, 41, 58);
     border-radius: 10px;
     padding: 12px;
-    // background-color: rgb(100, 49, 218);
   }
 }
 
@@ -722,12 +577,6 @@ body {
 .custom-page-status-card-start {
   @include breakpoint(tabletSmallMax) {
     align-items: flex-start !important;
-  }
-}
-
-.custom-small-title {
-  @include breakpoint(tabletSmallMax) {
-    font-size: 17px;
   }
 }
 

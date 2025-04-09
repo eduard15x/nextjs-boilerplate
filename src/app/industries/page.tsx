@@ -51,7 +51,7 @@ const Industries = () => {
                 solutions.
               </>
             }
-            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
+            css={"card-effect-second text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
             titleCss="text-center md:text-start text-title-xs"
@@ -70,7 +70,7 @@ const Industries = () => {
                 the location.
               </>
             }
-            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
+            css={"card-effect-second text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
             titleCss="text-center md:text-start text-title-xs"
@@ -88,7 +88,7 @@ const Industries = () => {
                 while reducing turnover—primarily on-site roles.
               </>
             }
-            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
+            css={"card-effect-second text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
             titleCss="text-center md:text-start text-title-xs"
@@ -106,7 +106,7 @@ const Industries = () => {
                 sustainable growth with on-site hires and remote flexibility.
               </>
             }
-            css={"tcntt-2 text-sh-effect mt-8 md:mt-0"}
+            css={"card-effect-second text-sh-effect mt-8 md:mt-0"}
             maxWidth="275px"
             arrangeItem="custom-arrange-item"
             titleCss="text-center md:text-start text-title-xs"
@@ -126,7 +126,7 @@ const Industries = () => {
             "Manufacturer saves $150,000 annually by trialing candidates before full-time offers."
           }
           css={
-            "tcntt mt-8 md:mt-0 md:col-start-1 md:col-end-2 justify-items-center"
+            "card-effect mt-8 md:mt-0 md:col-start-1 md:col-end-2 justify-items-center"
           }
           arrangeItem="text-center"
           secondTextCss="text-sm"
@@ -139,7 +139,7 @@ const Industries = () => {
             "Tech startup reduces hiring time by 40% with trial-based candidates."
           }
           css={
-            "tcntt mt-8 md:mt-0 md:col-start-3 md:col-end-4 justify-items-center"
+            "card-effect mt-8 md:mt-0 md:col-start-3 md:col-end-4 justify-items-center"
           }
           arrangeItem="text-center"
           secondTextCss="text-sm"
@@ -150,7 +150,9 @@ const Industries = () => {
           secondText={
             "Creative agency delivers project early by integrating trial candidates and co-development resources."
           }
-          css={"tcntt mt-8 md:mt-0 mt-8 md:col-start-2 justify-items-center"}
+          css={
+            "card-effect mt-8 md:mt-0 mt-8 md:col-start-2 justify-items-center"
+          }
           arrangeItem="text-center custom-arrange-item"
           secondTextCss="text-sm"
         />

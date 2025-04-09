@@ -68,7 +68,7 @@ const Services = () => {
               </>
             }
             css={
-              "tcntt-2 text-sh-effect md:col-start-3 md:col-end-4 text-sm mt-8"
+              "card-effect-second text-sh-effect md:col-start-3 md:col-end-4 text-sm mt-8"
             }
             maxWidth="350px"
           />
@@ -85,7 +85,9 @@ const Services = () => {
                 for hybrid teams.
               </>
             }
-            css={"tcntt-2 text-sh-effect col-start-3 col-end-4 text-sm mt-8"}
+            css={
+              "card-effect-second text-sh-effect col-start-3 col-end-4 text-sm mt-8"
+            }
             maxWidth="350px"
           />
           <PageStatusCard
@@ -100,7 +102,9 @@ const Services = () => {
                 challenges, including remote and on-site operations.
               </>
             }
-            css={"tcntt-2 text-sh-effect col-start-3 col-end-4 text-sm mt-8"}
+            css={
+              "card-effect-second text-sh-effect col-start-3 col-end-4 text-sm mt-8"
+            }
             maxWidth="350px"
           />
           <PageStatusCard
@@ -115,7 +119,9 @@ const Services = () => {
                 needs—on-site or remote.
               </>
             }
-            css={"tcntt-2 text-sh-effect col-start-3 col-end-4 text-sm mt-8"}
+            css={
+              "card-effect-second text-sh-effect col-start-3 col-end-4 text-sm mt-8"
+            }
             maxWidth="350px"
           />
         </div>
